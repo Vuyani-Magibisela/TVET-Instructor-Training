@@ -1,0 +1,262 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body{
+    background-color:#E0E0E0;
+}
+
+header{
+    background-color:#0055A7;;
+}
+
+nav .sblogo{
+    width: 111px;
+    margin: auto;
+}
+
+
+.title{
+    font-family: 'DINPro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* Menu */
+#sidebar-container {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px; 
+    transition: 0.5s;
+    background-color: #0055A7;
+    
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+
+  nav .active{
+    background-color: #8E8E8E;
+  }
+
+.sidebar a:hover {
+    color: #f1f1f1;
+  }
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+.openbtn {
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    left: 9px;
+    top: 7px;
+
+    font-size: 36px;
+    cursor: pointer;
+    background-color: rgba(255 ,255 ,255 ,0);
+    color: #fff;
+    /* padding: 10px 15px; */
+    border: none;
+  }
+  
+/* .openbtn:hover {
+    background-color: #FAAD25;
+    border-radius: 5px;
+    padding-bottom: 50px;
+  } */
+
+.sblogo{
+    width: 111px;
+    margin: auto;
+  }
+
+  #main {
+    margin: auto;
+    margin-top: 25px;
+    background: radial-gradient(210.25% 90.14% at 44.72% 47.18%, rgba(0, 85, 167, 0.6) 0%, rgba(0, 85, 167, 0.372) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    border-radius: 5px;
+    /* height: 100%; */
+    width: 341px;
+    padding: 25px;
+}
+.icon{
+    text-align: center;
+}
+
+.icon h1{
+    font-family: 'DINPro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+label{
+    font-family: 'DINPro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 31px;
+    color: #fff;
+}
+.instructor, .groups, .members, .files{
+  font-size: 24px;
+
+}
+
+ #lecture, #group {
+  background-color: #8E8E8E;
+  border-top: 2px #FAAD25 solid;
+  border-bottom: 2px #FAAD25 solid;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+
+.more{
+  width: 129px;
+  height: 33px;
+  left: 58px;
+  top: 607px;
+
+  border: 2px solid #FAAD25;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+#lecture option{
+  background-color: #E0E0E0;
+  color: #000;
+}
+
+#group_member_names input{
+    /* background-color: #E0E0E0; */
+    border: 2px solid #FAAD25;
+    border-radius: 8px;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0.1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ 
+}
+
+.submit{
+  background-color: #FAAD25;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+/*link Tree*/
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: blue;
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form_reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Project Upload</title>
+</head>
+<body>
+    <header>
+        <nav id="sidebar-container" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="projectuplod.html" class="active">Project Upload </a>
+                <a href="resources.html">Resources</a>
+                <a href="about.html">About</a>
+        </nav>
+        
+        <button class="openbtn" onclick="openNav()">&#9776; </button>
+            
+        <img src="img/Sci-Bono logo White.png" alt="" class="sblogo">
+        <h1 class="title">TVET Instructor Training</h1>
+       
+    </header>
+
+    <div id="main">
+        <div class="icon">
+            <iconify-icon
+                icon="material-symbols:group-add"    
+                style="font-size: 18px"
+                height="4em" 
+            >
+            </iconify-icon>
+            <h1>Group Project</h1>
+
+        </div>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <label class="instructor"for="lecture">Instructor:</label>
+            <select id="lecture" name="lecture">
+                <option value="John Doyoyo">John Doyoyo</option>
+                <option value="Ezekiel Shabe">Ezekiel Shabe</option>
+                <option value="Edwin Moloi">Edwin Moloi</option>
+                <option value="Vuyani Magibisela">Vuyani Magibisela</option>
+            </select>
+        
+            <br>
+        
+            <label class="groups" for="group">Groups:</label>
+            <select  id="group" name="group">
+                <option value="Group A">Group A</option>
+                <option value="Group B">Group B</option>
+                <option value="Group C">Group C</option>
+                <option value="Group D">Group D</option>
+            </select>
+        
+            <br>
+        
+            <label class="members" for="group_member_names">Group Member Names:</label>
+            <div id="group_member_names"></div>
+            <button class="more" type="button" onclick="addGroupMemberName()">Add More</button>
+        
+            <br>
+        
+            <label class="files" for="file">Upload your project here:</label>
+            <input type="file" id="file" name="file" accept=".doc, .pdf, .zip">
+        
+            <br>
+        
+            <input class="submit" type="submit" value="Upload">
+        </form>
+
+    </div>
+    
+    <script src="js/script.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+</body>
+</html>
