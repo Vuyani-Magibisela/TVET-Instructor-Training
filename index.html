@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!--Google analytics
+	================================================-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156064280-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-156064280-1');
+	</script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/form_reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Project Upload</title>
+    <title>Home</title>
 </head>
 <body>
     <header>
         <nav id="sidebar-container" class="sidebar">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="index.html">Home</a>
-                <a href="projectuplod.html" class="active">Project Upload </a>
+                <a href="index.html" class="active">Home</a>
+                <a href="projectuplod.html" >Project Upload </a>
                 <a href="resources.html">Resources</a>
                 <a href="about.html">About</a>
         </nav>
@@ -25,52 +38,72 @@
        
     </header>
 
-    <div id="main">
-        <div class="icon">
-            <iconify-icon
-                icon="material-symbols:group-add"    
-                style="font-size: 18px"
-                height="4em" 
-            >
-            </iconify-icon>
-            <h1>Group Project</h1>
-
+    <div id="main-container">
+        <div class="hero">
+            <img src="img/hero.png" alt="">
         </div>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            <label class="instructor"for="lecture">Instructor:</label>
-            <select id="lecture" name="lecture">
-                <option value="John Doyoyo">John Doyoyo</option>
-                <option value="Ezekiel Shabe">Ezekiel Shabe</option>
-                <option value="Edwin Moloi">Edwin Moloi</option>
-                <option value="Vuyani Magibisela">Vuyani Magibisela</option>
-            </select>
-        
-            <br>
-        
-            <label class="groups" for="group">Groups:</label>
-            <select  id="group" name="group">
-                <option value="Group A">Group A</option>
-                <option value="Group B">Group B</option>
-                <option value="Group C">Group C</option>
-                <option value="Group D">Group D</option>
-            </select>
-        
-            <br>
-        
-            <label class="members" for="group_member_names">Group Member Names:</label>
-            <div id="group_member_names"></div>
-            <button class="more" type="button" onclick="addGroupMemberName()">Add More</button>
-        
-            <br>
-        
-            <label class="files" for="file">Upload your project here:</label>
-            <input type="file" id="file" name="file" accept=".doc, .pdf, .zip">
-        
-            <br>
-        
-            <input class="submit" type="submit" value="Upload">
-        </form>
+        <div class="intro">
+        <p>
+            <span>Welcome to Sci-Bono</span><br>
+            We provide training programs to equip lecturers 
+            with digital literacy skills to develop a digitally 
+            competent workforce. Join us in our mission to 
+            improve the lives of South Africans through 
+            education and training.
+        </p>
+        </div>
+        <div class="program">
+            <h2>
+                Our Training Program
+            </h2>
+            <div class="text-row1">
+                <p>
+                    Our proposed training program is focused on 
+                    equipping lecturers with essential digital 
+                    literacy skills and basic e-teaching or 
+                    didactical training/digital pedagogy. 
+                    This will enable them to develop a digitally 
+                    competent workforce capable of responding 
+                    to fast-paced changes and the adoption of 
+                    new technologies.
+                </p>
+            </div>
+            <div class="text-row2">
+                <p>
+                    Lecturers will gain knowledge and skills to create 
+                    engaging online learning environments, 
+                    use technology to enhance the learning 
+                    experience and effectively integrate 
+                    digital tools into their teaching practice. 
+                    The program is flexible and tailored to 
+                    meet the needs of TVET lecturers.
+                </p>
+            </div>
+            <div class="text-row3">
+                <p>
+                    Our training program is delivered by experienced 
+                    trainers and we provide high-quality 
+                    support to ensure lecturers get the 
+                    most out of the program and 
+                    continue to improve their digital 
+                    literacy skills.
+                </p>
+            </div>
 
+            <div class="image-row1">
+                <img src="img/teacher.png" alt="">
+            </div>
+            <div class="image-row2">
+                <img src="img/skilled.png" alt="">
+            </div>
+            <div class="image-row3">
+                <img src="img/competent.png" alt="">
+            </div>
+            
+            </div>
+        </div>
+
+        
     </div>
     
     <script src="js/script.js"></script>
